@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表格：学生信息统计表 -->
+    <table border="2" borderColor="gray" width="500" height="200" align="center" cellspacing="5" cellpadding="10">
+        <tr>
+            <!-- 表头使用th -->
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>张三</td>
+            <td>男</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>花花</td>
+            <td>女</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>闻人语</td>
+            <td>女</td>
+            <td>19</td>
+        </tr>
+    </table>
+
+    <!-- rowspan 跨行合并 colspan 跨列合并 属性值为几则跨几格 -->
+    <table border="2" borderColor="gray" width="500" height="200" align="center" cellspacing="5" cellpadding="10">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td rowspan="2">6</td>
+            <td colspan="2">7</td>
+            <td>8</td>
+            <td>9</td>
+        </tr>
+        <tr>
+            <td colspan="4">10</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td colspan="2">12</td>
+            <td colspan="2">13</td>
+        </tr>
+    </table>
+
+</body>
+</html>

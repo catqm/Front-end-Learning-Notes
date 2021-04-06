@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 通配符选择器 */
+        /* 作用：清空默认样式 */
+        *{
+            /* 所以元素的边框 */
+            border: 1px solid sienna;
+            /* 设置元素的内间距 */
+            padding: 10px;
+        }
+
+        /* 标签选择器 */
+        div{
+            /* bd+ tab */
+            border: 1px solid rebeccapurple;
+            padding: 20px;
+        } 
+        /* 定义默认样式 */
+        li{
+            /* lst + tab */
+            /* 只清空li的列表样式 */
+            list-style-type: none;
+        }
+
+        /* id选择器 */
+        /* id属性唯一 一对一 */
+        #pageTitle{
+            color: rosybrown;
+        }
+
+        /* 类选择器 */
+        /* class 一对多 */
+        .page-title{
+            color: seagreen;
+            /* px代表像素单位 */
+            font-size: 50px;
+        }
+        /* 原子类：一个类选择器，只定义一条样式 */
+        /* 方便随意组合 */
+        .fz-50{
+            font-size: 50px;
+        }
+        .red{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>星云喵喵</h1>
+    <div>
+        <div>
+            <div>星云喵喵</div>
+        </div>
+    </div>
+    <ul>
+        <li>1</li>
+    </ul>
+    <ol>
+        <li>2</li>
+    </ol>
+    <!-- id命名建议用驼峰式 -->
+    <p id="pageTitle">星云喵喵id选择器</p>
+    <p>星云喵喵id标签</p>
+
+    <!-- class命名建议用- -->
+    <div class="page-title ">星云喵喵</div>
+    <div>星云喵喵</div>
+    <div>
+        <span>文本</span>
+        <!-- 不同class的值用空格分开 -->
+        <span class="fz-50 red">文本</span>
+        <p class="page-title">ppp</p>
+    </div>
+    
+
+</body>
+</html>

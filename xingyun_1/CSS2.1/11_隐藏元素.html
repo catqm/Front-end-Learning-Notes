@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            height: 800px;
+            background: pink;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+        }
+        .box1{
+            background: rgb(219, 165, 165);
+            /* 隐藏，不占位 */
+            display: none;
+        }
+        .box2{
+            background: rgb(233, 188, 105);
+            /* 隐藏，占位 */
+            visibility: hidden;
+        }
+        .box3{
+            background: rgb(167, 223, 245);
+            /* 隐藏透明，占位 */
+            opacity: 0;
+        }
+        .box4{
+            background: rgb(149, 245, 165);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+</body>
+</html>

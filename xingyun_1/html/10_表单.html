@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 表单 -->
+    <!-- action      提交数据的地址
+         method      提交数据的方式
+         target      在哪里查看结果 -->
+    <form action="./create" method="GET" target="_blank"></form>
+    
+    <!-- 对表单控件的标注 -->
+    <!-- for 指向表单控件的id -->
+    <label for="01">商品描述</label>
+    
+    <!-- 多行文本框 -->
+    <!-- cols 一行的字节    rows 显示的列数 -->
+    <textarea name="textarea" id="01" cols="30" rows="10"></textarea>
+
+    <textarea name="textarea2" id="02" cols="30" rows="10"></textarea>
+
+    <!-- 可以将表单控件卸载label元素内，实现联动 -->
+    <label >
+        记录
+        <textarea name="1" id="03" cols="30" rows="10"></textarea>
+    </label>
+</body>
+</html>

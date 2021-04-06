@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 后代选择器 */
+        /* div strong{
+            color: pink;
+            font-size: 20px;
+        } */
+        /* 增加限制 */
+        div p strong{
+            color: pink;
+            font-size: 20px;
+        }
+
+        /* 交集选择器 */
+        /* 交集选择器写在一起，不能有空格，标签名写在最前面，并只能出现一次 */
+        p.pp{
+            color: royalblue;
+            font-size: 40px;
+        }
+
+        /* 并集选择器 */
+        /* 用逗号隔开 */
+        h1,span{
+            border: 1px solid slategray;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- 不考虑语义，为了定义嵌套关系 -->
+    <div>
+        <div>
+            <p>
+                <span>
+                    <strong>星云喵喵</strong>
+                </span>
+            </p>
+        </div>
+        <h1>
+            <span>
+                <strong>星云喵喵</strong>
+            </span>
+        </h1>
+    </div>
+    <div>
+        <p class="pp">p</p>
+        <p>p</p>
+        <h1 class="pp">h1</h1>
+        <p>p</p>
+    </div>
+</body>
+</html>

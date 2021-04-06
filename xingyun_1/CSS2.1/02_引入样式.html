@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 外链式 -->
+    <!-- html和css文件并行加载 -->
+    <!-- href属性引入样式文件 -->
+    <!-- type属性表示该文件的类型是css文件 -->
+    <!-- rel属性表示文件与页面的关系 -->
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+
+    <!-- 导入式 -->
+    <!-- 先加载html 再加载css文件 -->
+    <style type="text/css">
+        @import url("css/style2.css");
+    </style>
+
+    <!-- 样式优先级，后面的覆盖前面的 -->
+</head>
+<body>
+    <p>星云喵喵</p>
+</body>
+</html>

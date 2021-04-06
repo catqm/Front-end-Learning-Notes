@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 文本设置样式 */
+        a{
+            color: black;
+            /* 文本修饰 */
+            /* tdn + tab */
+            /* text-decoration: none; */
+            /* 上划线 */
+            /* text-decoration: overline; */
+            /* 删除线 */
+            text-decoration: line-through;
+        }
+        p{
+            width: 1000px;
+            /* 首行缩进 */
+            /* em单位表示文字个数 */
+            text-indent: 2em;
+            font-size: 20px;
+            /* 对齐方式 */
+            /* 居中 */
+            /* text-align: center; */
+            /* 两侧都对齐 */
+            text-align: justify;
+        }
+        .demo-1{
+            /* 字母之间距离 */
+            letter-spacing: 10px;
+        }
+        .demo-2{
+            word-spacing: 20px;
+        }
+        img{
+            /* 居中对齐 */
+            /* vertical-align: middle; */
+            /* 默认值为baseline */
+            /* 设置像素值 */
+            vertical-align: -100px;
+        }
+        /* 处理空白 */
+        .ickt{
+            /* 文本不换行 */
+            /* white-space: nowrap; */
+            /* 保留空白 */
+            /* white-space: pre; */
+            /* 保留空白，正常换行 */
+            /* white-space: pre-wrap; */
+            /* 空白折叠，保留换行符 */
+            /* white-space: pre-line; */
+
+            width: 120px;
+            /* 边框 */
+            border: 1px solid olive;
+        }
+        .ickt2{
+            width: 100px;
+            border: 2px solid slateblue;
+            /* 截取 */
+            /* text-overflow: clip; */
+            /* ellipsis为CSS3的属性，省略的内容显示... */
+            text-overflow: ellipsis;
+            /* 配合white-space,不要换行 */
+            white-space: nowrap;
+            /* 溢出隐藏 */
+            overflow: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 class="demo-1">XingYun Miaomiao</h1>
+    <h1 class="demo-2">XingYun Miaomiao</h1>
+    <h1 class="demo-2">星云 喵喵</h1>
+    <h1 class="demo-2">星云喵喵</h1>
+    <p>星云喵喵<img src="./picture/logo.png" alt=""></p>
+    <a href="">hello world！</a>
+    <a href="#123">hello world！</a>
+    <p>更让其难以接受的是，评论里，不少人还对她及她的家人进行了恶意揣测，说她蹭产假。“我现在很伤心，不明白街道办为何要对公众说我在单位是计划生育工作者。作为一个母亲，有必要澄清事情的真相。”</p>
+    <div class="ickt">
+        hello           XingYun!
+        hello           XingYun!
+    </div>
+    <div class="ickt2"> 
+        hello Xingyun ！！
+    </div>
+</body>
+</html>

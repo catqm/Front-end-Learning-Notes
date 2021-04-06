@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 1px solid chocolate;
+            width: 800px;
+            height: 800px;
+        }
+        .box1,
+        .box2,
+        .box3{
+            width: 100px;
+            height: 100px;
+            background: darkgrey;
+        }
+        /* 设置内边距 */
+        .box1{
+            /* 单值法 */
+            /* margin: 50px; */
+            /* 二值法：上下，左右 */
+            /* margin: 50px 70px; */
+            /* 三值法：上，左右，下 */
+            /* margin: 50px 70px 80px; */
+            /* 四值法：上，右，下，左 */
+            margin: 50px 70px 80px 90px;   
+       }
+        .box2{
+            /* 单独设置 */
+            margin-top: 50px;
+            margin-left: 100px;
+            margin-bottom: 200px;
+            margin-right: 150px;
+        }
+        .box3{
+            margin: 50px 70px 80px;
+        }
+        /* 父子元素之间的margin塌陷 */
+        .demo1{
+            height: 800px;
+            background-color: darkkhaki;
+            margin-top: 150px;
+            overflow: hidden;
+
+        }
+        .demo2{
+            height: 600px;
+            margin-left: 100px;
+            background-color: darksalmon;
+            /* 子元素设置的上边距,上边距传递到父元素 */
+            /* 1.设置padding */
+            margin-top: 100px;
+            /* 不想让demo3向上传递 */
+            /* padding: 1px; */
+            /* padding的值必须大于0，保险起见设置大于等于1 */
+            /* 2.设置border */
+            /* border: 1px solid pink; */
+            /* 3.设置overflow */
+            /* overflow: hidden; */
+        }
+        /* 后代元素 */
+        .demo3{
+            height: 200px;
+            background-color: darkseagreen;
+            margin-left: 100px;
+            /* 后代元素设置上边距 */
+            margin-top: 50px;
+        }
+        /* 总结 */
+        /* 1. 子元素设置了上边距，默认传递给父元素 */
+        /* 2. 父元素设置了上边距，会与子元素合并 */
+            /* 合并时以值大的为准 */
+        /* 3. 后代元素设置的上边距会一直传递到body */
+        /* 4. 父元素的上边距会与后代元素上边距合并，保留大的 */
+        /* 可以通过padding,border,overflow来阻止margin-top的传递，必须显性设置 */
+        .a img{
+            width: 300px;
+            height: 200px;
+            /* display: block; */
+        }
+        .a{
+            /* font-size: 0; */
+            width: 800px;
+            height: 800px;
+        }
+        .img1{
+            margin-right: 50px;
+        }
+        .img2{
+            margin-left: 25px;
+        }
+        /* 上下会塌陷，左右不会塌陷 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </div>
+    <!-- 父子与后代元素之间的塌陷 -->
+    <div class="demo1">
+        <div class="demo2">
+            <!-- 后代元素 -->
+            <div class="demo3"></div>
+        </div>
+    </div>
+    <!-- 左右边距 -->
+    <div class="a">
+        <img class="img1" src="./picture/1.jpg" alt="">
+        <img class="img2" src="./picture/2.jpg" alt="">
+    </div>
+</body>
+</html>

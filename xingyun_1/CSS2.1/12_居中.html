@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 单行文本居中 */
+        .box1{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+            /* 水平方向 */
+            text-align: center;
+            /* 垂直方向 */
+            /* 让行高与高度一致 */
+            line-height: 200px;
+        }
+        /* 多行文本居中 */
+        .box2{
+            width: 200px;
+            /* height: 200px; */
+            border: 1px solid #000;
+            margin-top: 20px;
+            line-height: 30px;
+            /* 水平居中 */
+            text-align: center;
+            /* 垂直方向 */
+            /* 通过padding来设置高度 */
+            padding: 90px 0;
+
+        }
+        /* 盒子居中 */
+        .container{
+            width: 300px;
+            /* height: 300px; */
+            border: 1px solid #000;
+            margin-top: 20px;
+            /* 行内元素 */
+            /* text-align: center; */
+            /* 垂直居中 */
+            /* line-height: 300px; */
+            
+            /* 设置容器元素 */
+            /* 让块元素居中，可以设置上下padding */
+            /* padding: 100px 0; */
+
+            /* 行内块元素 */
+            /* 水平居中 */
+            text-align: center;
+            /* 垂直居中 */
+            line-height: 200px;
+        }
+        div img{
+            /* 注意，垂直居中的时候，要更改图片的对齐方式 */
+            vertical-align: middle;
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background: coral;
+            margin: 0 auto;
+            /* 如果已知高度，设置margin-top，但是不要塌陷 */
+            /* margin-top: 100px; */
+            /* margin: 100px auto; */
+            /* 如果父容器高度不确定，可以在父容器中，设置padding居中 */
+        }
+        img{
+            width: 150px;
+            height: 100px;
+        }
+
+        /* 模拟表格实现居中 */
+        .demo1{
+            width: 600px;
+            height: 600px;
+            border: 10px solid pink;
+            /* 模拟表格 */
+            display: table-cell;
+            /* 水平居中 */
+            text-align: center;
+            /* 垂直居中 */
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <!-- 文本居中 -->
+    <div class="box1">hello Xingyun</div>
+    <div class="box2">
+        hello Xingyun!
+        hello Xingyun!
+        <br>
+        hello Xingyun!
+        hello Xingyun!
+    </div>
+    <!-- 盒子居中 -->
+    <div class="container">
+        <!-- 行内元素 -->
+        <!-- <span>hello</span> -->
+        <!-- <div class="box3">box3</div> -->
+        <img src="./picture/2.jpg" alt="">
+    </div>
+    <!-- 表格 -->
+    <table border="1" width="500" height="500">
+        <tbody>
+            <tr>
+                <!-- th设置居中，但会加粗字体 -->
+                <!-- 单行文本 -->
+                <!-- <td align="center">
+                    hello Xingyun!
+                </td> -->
+                <!-- 多行文本 -->
+                <!-- <td align="center">
+                    hello Xingyun!
+                    <br>
+                    hello Xingyun!
+                </td> -->
+                <!-- 行内元素 -->
+                <!-- <td align="center">
+                    <span>hello Xingyun!</span>
+                </td> -->
+                <!-- 块元素 -->
+                <!-- <td align="center">
+                    <div>hello Xingyun!</div>
+                </td> -->
+                <td align="center">
+                    <img src="./picture/1.jpg" alt="">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- 通过表格居中 -->
+    <!-- 借助于表格特性，可将单行文本，多行文本，行内元素，块元素，行内块元素等，实现居中 -->
+    <div class="demo1">
+        hello
+        <br>
+        hello Xingyun!
+        <span>span</span>
+        <div>div</div>
+        <img src="./picture/1.jpg" alt="">
+    </div>
+</body>
+</html>
