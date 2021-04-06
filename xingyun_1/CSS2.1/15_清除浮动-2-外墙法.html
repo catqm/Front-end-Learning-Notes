@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 10px auto;
+            width: 800px;
+            background: green;
+        }
+        .container div{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .box1{
+            background: hotpink;
+        }
+        .box2{
+            background: yellow;
+        }
+        .box3{
+            background: slateblue;
+        }
+        .box4{
+            background: red;
+        }
+        .box5{
+            background: blue;
+        }
+        .box6{
+            background: chocolate;
+        }
+        .outer{
+            height: 200px;
+            background: salmon;
+        }
+        /* 让外墙清除父元素的浮动 */
+        /* 优势：自适应内容高度 */
+        /* 劣势：增加了不必要的元素 */
+        .outer-wall{
+            clear: both;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1">1-1-1</div>
+        <div class="box2">2-2-2</div>
+        <div class="box3">3-3-3</div>
+        <div class="box4">4-4-4</div>
+        <div class="box5">5-5-5</div>
+        <div class="box6">6-6-6</div>
+    </div>
+    <!-- 外墙法 -->
+    <div class="outer-wall"></div>
+    <!-- 外部的元素 -->
+    <div class="outer">
+        外部的元素
+    </div>
+</body>
+</html>

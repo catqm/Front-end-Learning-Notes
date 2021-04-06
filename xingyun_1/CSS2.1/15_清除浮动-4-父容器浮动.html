@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .list1{
+            background: green;
+            width: 800px;
+            /* 让父容器浮动 */
+            float: left;
+        }
+        /* .list2{
+            background: gold;
+        } */
+        .box1,
+        .box2,
+        .box3{
+            width: 100px;
+            height: 100px;
+            float: left;
+        }
+        .box1{
+            background: greenyellow;
+        }
+        .box2{
+            background: hotpink;
+        }
+        .box3{
+            background: sienna;
+        }
+        .box4{
+            height: 50px;
+            background: grey;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="list1">
+        <!-- 增加一个span 观察清除父容器浮动和清除子容器浮动的区别 -->
+        <span>222</span>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    <div class="box4"></div>
+    <!-- <div class="list2">
+        <div class="box4"></div>
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div> -->
+</body>
+</html>
