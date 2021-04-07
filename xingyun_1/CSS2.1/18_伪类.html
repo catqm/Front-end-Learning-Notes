@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 无法描述不同状态的样式 */
+        /* .inp{
+            color: coral;
+        } */
+        /* 伪类 */
+        /* 获取焦点时文字显示红色 */
+        /* .inp:focus{
+            color: red;
+        } */
+        /* 伪元素 */
+        /* .demo:after{
+            content: "after content";
+        } */
+        .container{
+            height: 300px;
+            width: 300px;
+            background: cornflowerblue;
+        }
+        /* 鼠标滑过container,让input文本变成红色 */
+        .container:hover input{
+            color: red;
+        }
+        /* 设置伪元素的语法不合法，伪元素只能添加正在最后一个简单的选择器 */
+        /* .container:after div{
+            content: "after";
+            font-size: 50px;
+        } */
+        .container div:after{
+            content: "after";
+            font-size: 50px;
+        }
+        /* 注意，伪类和伪元素对大小写不敏感 */
+        /* 伪类权值大于伪元素 */
+
+        /* a元素的伪类 */
+        /* 1.link 初始状态；必须是第一次访问或者清除历史记录的访问 */
+        /* 2.visited 访问后的状态 */
+        /* 3.hover 鼠标悬停；鼠标滑过的效果 */
+        /* 4.activ 激活状态 */
+        /* 上面四个的使用顺序l-v-h-a（love hate爱恨准则） */
+
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: cornflowerblue;
+        }
+        a:hover{
+            color: blue;
+        }
+        a:active{
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <input class="inp" type="text" value="hello">
+        <div class="demo"></div>
+    </div>
+    <a href="#/demo33">link-1</a><br>
+    <a href="#/demo333">link-2</a><br>
+    <a href="#/demo3333">link-3</a><br>
+    <a href="#/demo33333">link-4</a><br>
+
+</body>
+</html>
