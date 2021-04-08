@@ -20,18 +20,18 @@
         }
         .box1{
             background: green;
-            margin-left: -50px;
+            margin-left: -200px;
         }
         .box2{
             background: hotpink;
             opacity: 0.8;
             /* box2移动到box1前面 移动距离为两者的宽度相加 */
-            margin-left: -200px;
+            /* margin-left: -200px; */
         }
         .box3{
             background: indigo;
             opacity: 0.8;
-            margin-left: -300px;
+            /* margin-left: -300px; */
 
         }
         .demo{
@@ -44,6 +44,7 @@
         /* 结论 */
         /* 让2移动到1的前面，2移动的距离与1无关，与1和2的宽度有关 */
         /* 让3移动到最前面 此时3的移动距离：1移动的距离+2的宽度+3移动的距离 */
+        /* 若1移动的距离大于1的宽度了，则2会贴边在父容器 */
     </style>
 </head>
 <body>
