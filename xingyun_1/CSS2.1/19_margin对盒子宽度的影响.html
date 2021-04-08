@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .parent{
+            width: 800px;
+            height: 800px;
+            margin: 0 auto;
+            background: pink;
+        }
+        .child{
+            height: 400px;
+            background: powderblue;
+            /* margin-left和margin-right是正值，盒子宽度减小 */
+            /* margin-left: 100px; */
+            /* margin-left和margin-right是负值，盒子宽度增加 */
+            /* margin-right: -200px; */
+            /* 设置了宽度，则margin无法改变宽度 */
+            /* 会改变位置，默认左边距的优先级高于右边距 */
+            /* 可根据父容器的align属性更改优先级 */
+            width: 500px;
+            margin-left: 200px;
+            margin-right: -300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 可通过align属性改变盒子的对齐方式 -->
+    <div class="parent" align="right">
+        <div class="child"></div>
+    </div>
+</body>
+</html>
