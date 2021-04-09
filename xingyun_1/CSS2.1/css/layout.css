@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+/* 清除浮动工具类 */
+.clearfix:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.main{
+    width: 970px;
+    margin: 0 auto;
+}
+/* 头部 */
+.header{
+    margin-bottom: 10px;
+}
+.header .header-left{
+    float: left;
+    background: red;
+    width: 277px;
+    height: 103px;
+}
+.header .header-right{
+    float: right;
+}
+.header .header-right .title{
+    width: 137px;
+    height: 49px;
+    margin-bottom: 8px;
+    background: greenyellow;
+    float: right;
+}
+.header .header-right .intro{
+    width: 678px;
+    height: 46px;
+    background: greenyellow;
+    clear: right;
+}
+/* 身体 */
+.body{
+    margin-bottom: 10px;
+}
+.body .body-left{
+    float: left;
+    width: 310px;
+    height: 435px;
+    background: gold;
+    margin-right: 10px;
+}
+.body .body-right{
+    float: left;
+    width: 650px;
+}
+.body .body-right .centent{
+    margin-bottom: 10px;
+}
+.body .body-right .centent .modules{
+    float: left;
+    width: 450px;
+}
+.body .body-right .centent .modules .module1{
+    height: 240px;
+    background:royalblue;
+    margin-bottom: 10px;
+}
+.body .body-right .centent .modules .module2{
+    height: 110px;
+    background:royalblue;
+    margin-bottom: 10px;
+}
+.body .body-right .centent .modules .module3{
+    height: 30px;
+    background:royalblue;
+}
+.body .body-right .centent .slider{
+    float: right;
+    width: 190px;
+    height: 401px;
+    background:magenta;
+}
+.body .body-right .status{
+    width: 650px;
+    height: 25px;
+    background: green;
+}
+/* 脚页 */
+.footer{
+    width: 970px;
+    height: 35px;
+    background: blue;
+}
