@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            width: 500px;
+            height: 1000px;
+            padding: 100px;
+            border: 50px dashed orange;
+            margin: 100px;
+            /* 背景色从border开始渲染 */
+            /* 背景图片第一张图从padding开始渲染 */
+            background: orangered;
+            background-image: url(./picture/!.png);
+            /* 平铺 */
+            background-repeat: no-repeat;
+            /* 水平方向 */
+            /* background-repeat: repeat-x; */
+            /* 垂直方向 */
+            /* background-repeat: repeat-y; */
+
+            /* 定位 */
+            /* CSS中坐标轴y轴向下为正 */
+            /* background-position: 150px 150px; */
+            /* 特殊变量 */
+            /* background-position: center center; */
+            /* background-position: center top; */
+            /* 百分比 */
+            background-position: 50% 50%;
+
+            /* 固定背景 */
+            /* 跟随滚动条滚动 */
+            /* 背景图片的位置变为相对于整个页面的位置 */
+            background-attachment:fixed;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="demo">
+        11
+    </div>
+</body>
+</html>

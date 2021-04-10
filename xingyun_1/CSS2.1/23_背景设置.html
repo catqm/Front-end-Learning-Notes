@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            width: 1000px;
+            height: 1000px;
+            padding: 100px;
+            border: 50px dotted orange;
+            /* 通过一个属性，实现效果 */
+            background: skyblue url("./picture/1.jpg") no-repeat left top fixed;
+        }
+        .nav{
+            width: 150px;
+            height: 60px;
+            line-height: 60px;
+            font-size: 20px;
+            background: url("picture/cake.png") repeat-x;
+        }
+        /* 设置banner */
+        .banner{
+            width: 1200px;
+            height: 400px;
+            margin: 0 auto;
+            background: url("picture/1.jpg") center;
+        }
+        /* 插入图表 */
+        .items1 li span{
+            padding: 16px;
+            /* background: coral; */
+            background: url(./picture/cake.png) no-repeat left center;
+        }
+        /* 通过伪元素设置 */
+        .items2 li:before{
+            content: "";
+            padding: 8px;
+            background-image: url(./picture/cake.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h1{
+            background-image: url(./picture/logo.png);
+            background-repeat: no-repeat;
+            padding: 320px;
+            /* 隐藏文字 */
+            /* 1.溢出页面 */
+            text-indent: -100000px;
+            /* 2.让文字从盒子中出去，溢出隐藏 */
+            /* line-height: 1000000px;
+            overflow: hidden; */
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="demo"></div> -->
+    <!-- <div class="nav">主页</div> -->
+    <!-- 设置banner -->
+    <div class="banner"></div>
+    <!-- 列表图标 -->
+    <ul class="items1">
+        <li class="item1"><span>蛋糕</span></li>
+        <li class="item2"><span>蛋糕</span></li>
+        <li class="item3"><span>蛋糕</span></li>
+    </ul>
+    <ul class="items2">
+        <li class="item1"><span>蛋糕</span></li>
+        <li class="item2"><span>蛋糕</span></li>
+        <li class="item3"><span>蛋糕</span></li>
+    </ul>
+    <!-- SEO -->
+    <h1>星云喵喵</h1>
+</body>
+</html>
