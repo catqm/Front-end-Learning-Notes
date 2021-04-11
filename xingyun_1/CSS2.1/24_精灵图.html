@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul{
+            margin: 0 auto;
+            width: 168px;
+            height: 52px;
+        }
+        ul li{
+            float: left;
+            width: 30px;
+            height: 50px;
+            border: 1px solid #ccc;
+            text-align: center;
+        }
+        span{
+            padding: 10px;
+            background-repeat: no-repeat;
+            background-position: center center;
+            /* 水平方向的精灵图 */
+            background-image: url(./picture/shuiping.png);
+        }
+        p{
+            font-size: 12px;
+            padding-top: 6px;
+        }
+
+        .item-1 span{
+            /* background-image: url(./picture/cake.png); */
+            background-position: 3px;
+        }
+        .item-2 span{
+            /* background-image: url(./picture/book.png); */
+            background-position: -17px;
+        } 
+        .item-3 span{
+            /* background-image: url(./picture/list.png); */
+            background-position: -37px;
+        } 
+        .item-4 span{
+            /* background-image: url(./picture/Education.png); */
+            background-position: -59px;
+        } 
+        /* 网页上，一张图片就会发起一次http请求 */
+        /* 为了优化，整合小碎图片在一张图片上，提高网页加载速度 */
+        /* 精灵图所以小碎图片为png，通过盒子的宽高限制精灵图 */
+        /* 水平精灵图，宽度固定，高度不固定； */
+        /* 垂直精灵图，高度固定，宽度不固定； */
+        /* 定点精灵图，高度固定，宽度固定 */
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="item-1">
+            <span></span>
+            <p>蛋糕</p>
+        </li>
+        <li class="item-2">
+            <span></span>
+            <p>书</p>
+        </li>
+        <li class="item-3">
+            <span></span>
+            <p>报告</p>
+        </li>
+        <li class="item-4">
+            <span></span>
+            <p>教育</p>
+        </li>
+    </ul>
+</body>
+</html>
