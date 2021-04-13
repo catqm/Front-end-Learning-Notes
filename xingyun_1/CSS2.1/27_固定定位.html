@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            margin: 100px;
+            border: 100px solid #ccc;
+            background-color: pink;
+
+            position: relative;
+        }
+        .box{
+            /* width: 100px;
+            height: 100px; */
+            background-color: plum;
+            /* 固定定位,不受父元素影响 */
+            position: fixed;
+            /* position: absolute; */
+            /* 一旦设置负值，元素将移除窗口 */
+            /* top: -100px; */
+            /* top: 100px;
+            left: 100px; */
+            /* right: 100px;
+            bottom: 100px; */
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+        }
+        /* 可以通过固定定位实现一直存在的导航栏 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+    <h1>hello</h1>
+</body>
+</html>

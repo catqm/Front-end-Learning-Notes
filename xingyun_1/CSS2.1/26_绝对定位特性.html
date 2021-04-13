@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 100px;
+            padding: 100px;
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            /* border: 50px solid #ccc; */
+            border: 100px solid #ccc;
+            /* 父元素设置定位 */
+            /* relative更常用： 1.不会脱离文档流；2.不会影响后面的元素*/
+            position: relative;
+            /* position: absolute; */
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+            /* 绝对定位 */
+            position: absolute;
+            /* 默认相对于body定位 */
+            /* 如果父元素设置了定位，则会相对于父元素定位 */
+            /* 就近原则：相对于离他最近的设置了定位的元素 */
+            top: 500px;
+            left: 500px;
+        }
+        /* 中间插入了元素 */
+        .imer{
+            width: 100px;
+            height: 100px;
+            background-color: royalblue;
+        }
+        /* 行内元素设置绝对定位 */
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            /* 行内元素不会有宽高，但是定位后宽高就能正常显示 */
+            position: absolute;
+            top: 150px;
+            left: 150px;
+            /* 不论时行内元素，还是块元素，设置了定位，display属性失效了 */
+            /* display: block; */
+
+            /* 压盖现象，元素设置了绝对定位，后面的元素会显示在前面元素的上面 */
+
+            /* 定位居中 */
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+        .box3{
+            width: 400px;
+            height: 400px;
+            background-color: sandybrown;
+            /* 居中 */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 通过margin移动盒子:盒子宽高的一般 */
+            margin-top: -200px;
+            margin-left: -200px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="imer">
+            <div class="box"></div>
+            <span class="box2">span</span>
+        </div>
+    </div>
+    <h1>hello</h1>
+    <div class="box3"></div>
+</body>
+</html>
