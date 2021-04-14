@@ -1,0 +1,125 @@
+<!-- IE6  不加DTD 盒子内减 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        /* IE6 不兼容交集选择器的类选择器连写 */
+        /* 解决办法:使用标签和一个类交集.其他的7种选择器完美兼容 */
+        div.title.box{
+            color: red;
+            font-size: 100px;
+            /* 不加DTD IE6盒子为内减,其他浏览器为外扩 */
+            width: 200px;
+            height: 200px;
+            border: 20px solid green;
+            padding: 50px;
+            margin: 50px;
+            background-color: pink;  
+        }
+        .demo{
+            /* IE6 不能有小于字号的高的盒子,如果盒子小于默认字号,不会正常显示.高度会是最小的字号的高 */
+            /* 解决方法:单独给IE6设置一个很小的字号 */
+            height: 5px;
+            background-color: orange;
+            /* 兼容IE6 */
+            _font-size: 0;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- 交集选择器 -->
+    <!-- <div class="title box">hello</div> -->
+
+    <!-- 最小高度 -->
+    <!-- <div class="demo"></div> -->
+
+    <!-- 浮动 -->
+    <!-- IE6 不浮动的盒子不会钻到浮动盒子的底下,占有原来的标准流位置 -->
+    <!-- 解决办法:同级元素下,要么都浮动,要么都不浮动.不用浮动做遮盖效果,用定位做遮盖效果 -->
+    <!-- 3px bug:两个盒子,一个浮动,一个不浮动,他们之间会有3px的空隙 -->
+    <!-- 解决方法,1浮动元素移动3px;2两个元素都设置浮动 -->
+    <!-- <style>
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+            margin-left: 50px;
+            /* margin-right: -3px; */
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+    <div class="box1"></div>
+    <div class="box2"></div> -->
+
+    <!-- 双边距 -->
+    <!-- IE6 设置与浮动相同方向的margin,第一个元素有双倍边距 -->
+    <!-- 解决方法: -->
+    <!-- 1.不能用儿子去撑开父级的间距,用父级的padding去挤 -->
+    <!-- 2.设置margin与浮动方向相反 -->
+    <!-- 3.设置第一个边距为一半 -->
+    <!-- <style>
+        .contaner{
+            border: 1px solid #000;
+            height: 200px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: hotpink;
+            float: left;
+            margin-left: 20px;
+        }
+    </style>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div> -->
+
+    <!-- IE6 不支持固定定位，用js模拟 -->
+    <!-- <style>
+        body{
+            height: 2000px;
+        }
+        .box{
+            position: fixed;
+            /* IE6支持绝对定位 */
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            right: 200px;
+            bottom: 200px;
+        }
+    </style>
+    <div class="box"></div> -->
+
+    <!-- 图片透明度 -->
+    <!-- IE6/7/8 不支持opacity属性，可以使用filter:alpha(opacity=50);来设置，数值为0-100之间的整数 -->
+    <style>
+        .box{
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            width: 200px;
+            height: 200px;
+            background-color: plum;
+            /* 半透明 */
+            opacity: 0.5;
+            /* IE678 */
+            filter: alpha(opacity=50);
+        }
+    </style>
+    <img src="./picture/1.jpg" alt="">
+    <div class="box"></div>
+</body>
+</html>

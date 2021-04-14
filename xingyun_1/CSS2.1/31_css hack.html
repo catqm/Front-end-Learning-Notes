@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* css hack */
+        h1{
+            color: red;
+            /* IE6 hack : -或_*/
+            /* -color: green; */
+            /* IE6/7 hack : !$&*()+%+@,./`[]#~?:<>| */
+            /* !color: yellow; */
+            /* IE 8/9 hack : \0 */
+            /* color: #000\0; */
+            /* IE 6/7/8/9/10 hack : \9 */
+            color: violet\9;
+        }
+        /* css选择器的hack */
+        /* IE6 hack : *html.box{} */
+        *html .title{
+            font-size: 50px;
+            background-color: turquoise;
+        }
+        /* IE7 hack : .selector,{} */
+        /* .title,{
+            background:pink;
+        } */
+        /* 非IE6 hack : html>body.selector,>表示子集选择器:只选择儿子集,后代集不选,IE6不支持 */
+        body>.title{
+            font-size: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">星云喵喵</h1>
+</body>
+</html>
