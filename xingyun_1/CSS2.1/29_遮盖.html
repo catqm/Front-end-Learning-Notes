@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            background-color: coral;
+            position: relative;
+        }
+        /* 浮动遮盖 */
+        /* .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid cornflowerblue;
+            background-color: papayawhip;
+            float: left;
+            font-size: 50px;
+        }
+        .box1{
+            margin-left: -150px;
+        }
+        .box2{
+            margin-left: -200px;
+        } */
+        /* 定位遮盖 */
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid cornflowerblue;
+            font-size: 50px;
+        }
+        /* 相对定位 */
+        .box1{
+            background-color: pink;
+            position: relative;
+            top: 150px;
+            left: 0;
+        }
+        /* 没有定位 */
+        .box2{
+            background-color: salmon;
+        }
+        /* 绝对定位 */
+        .box3{
+            background-color: silver;
+            position: absolute;
+            top: 150px;
+            left: 50px;
+        }
+        /* 固定定位 */
+        .box4{
+            background-color: papayawhip;
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            margin-left: -160px;
+        }
+        .box5{
+            background-color: mediumpurple;
+        }
+        /* 总结 */
+        /* 1.没有设置定位的盒子会被有定位的盒子盖住 */
+        /* 2.后面设置定位的盒子会盖住前面的盒子 */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+</body>
+</html>

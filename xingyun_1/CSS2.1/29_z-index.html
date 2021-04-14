@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            background-color: coral;
+            position: relative;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid cornflowerblue;
+            font-size: 50px;
+        }
+        /* 相对定位 */
+        .box1{
+            background-color: pink;
+            position: relative;
+            top: 150px;
+            left: 0;
+            /* 调节顺序 */
+            z-index: 100;
+        }
+        /* 没有定位 */
+        .box2{
+            background-color: salmon;
+            /* 没有定位的盒子不能设置z-index */
+            z-index: 200;
+        }
+        /* 绝对定位 */
+        .box3{
+            background-color: silver;
+            position: absolute;
+            top: 150px;
+            left: 50px;
+        }
+        /* 固定定位 */
+        .box4{
+            background-color: papayawhip;
+            position: fixed;
+            top: 100px;
+            left: 50%;
+            margin-left: -160px;
+        }
+        .box5{
+            background-color: mediumpurple;
+        }
+
+        /* z-index默认值为0 */
+        .demo1{
+            background-color: mediumspringgreen;
+            position: absolute;
+            left: 30px;
+            top: 450px;
+            /* 显示在元素的下面 */
+            z-index: -1;
+        }
+        .demo2{
+            background-color: palegreen;
+            position: absolute;
+            left: 70px;
+        }
+        .demo3{
+            background-color: lightgoldenrodyellow;
+            /* 虽然没有定位，不能设置z-index，但是可以看作z-index为0 */
+        }
+
+        /* 拼爹 */
+        .parent1{
+            background-color: lightsalmon;
+            position: relative;
+            z-index: 5;
+        }
+        .parent2{
+            background-color: lightskyblue;
+            position: relative;
+            z-index: 1;
+        }
+        .child1{
+            position: absolute;
+            background-color: lightslategray;
+            top: 50px;
+            left: 200px;
+            z-index: 100;
+        }
+        .child2{
+            position: absolute;
+            background-color: lightyellow;
+            top: 0;
+            left: 200px;
+            /* 父盒子1大于父盒子2，因此不论子盒子2不论多大，都无法盖住子盒子1 */
+            z-index: 200;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+    </div>
+    <div class="box demo1">1</div>
+    <div class="box demo2">2</div>
+    <div class="box demo3">3</div>
+
+    <!-- 拼爹 -->
+    <div class="box parent1">
+        P1
+        <div class="box child1">C1</div>
+    </div>
+    <div class="box parent2">
+        P2
+        <div class="box child2">C2</div>
+    </div>
+</body>
+</html>
