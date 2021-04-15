@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border:5px solid green;
+            height: 500px;
+            background-color: pink;
+        }
+        .container div{
+            margin: 50px 0;
+        }
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: gold;
+            float: left;
+        }
+        .box2{
+            width: 200px;
+            height: 200px;
+            background-color: seagreen;
+            /* 盒子设置为BFC后，不会与浮动的盒子重合 */
+            /* display: inline-block; */
+            /* overflow: hidden; */
+            /* float: left; */
+        }
+        .box3{
+            width: 100px;
+            height: 100px;
+            background-color: sienna;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+    <div class="box3"></div>
+    <!-- BFC  Block Formatting Context 块级格式化上下文 -->
+    <!-- 内部的盒子会在垂直方向，一个一个的放置 -->
+    <!-- 盒子垂直方向的距离由margin决定，属于同一个BFC的两个相邻Box的上下margin会发生重叠（塌陷） -->
+    <!-- 每个元素的左边，与包含的盒子的左边相接触，即便存在浮动也是如此（贴边） -->
+    <!-- BFC区域不会与float重叠 -->
+    <!-- BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之也如此 -->
+    <!-- 计算BFC的高度时，浮动元素也参与计算 -->
+
+    <!-- 产生BFC的情况: -->
+    <!-- 1.根元素 -->
+    <!-- 2.float的属性不为none -->
+    <!-- 3.position为absolute或fixed -->
+    <!-- 4.display为inline-block,table-cell,table-caption,flex -->
+    <!-- 5.overflow不为visible -->
+</body>
+</html>

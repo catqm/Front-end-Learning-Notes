@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            border: 5px solid green;
+        }
+        span{
+            border: 1px solid #000;
+            background-color: pink;
+        }
+        .span1{
+            margin-top: 20px;
+        }
+        .span2{
+            margin-bottom: 20px;
+        }
+        .span3{
+            padding-top: 30px;
+            /* 如果浮动，打乱顺序 */
+            /* float: left; */
+        }
+        .span4{
+            padding-bottom: 30px;
+        }
+        .span5{
+            display: inline-block;
+            /* 父盒子的高度由最高的子盒子决定 */
+            height: 70px;
+        }
+
+        .box1{
+            width: 100px;
+            height: 100px;
+            background-color: plum;
+            /* 打断单词 */
+            word-wrap: break-word;
+            display: inline-block;
+        }
+        .box2{
+            padding-bottom: 100px;
+            background-color: gold;
+            display: inline-block;
+        }
+        .box3{
+            padding-bottom: 50px;
+            width: 100px;
+            background-color: indianred;
+            display: inline-block;
+        }
+        .span6{
+            background-color: khaki;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="span1">span1</span>
+        <span class="span2">span2</span>
+        <span class="span3">span3</span>
+        <!-- 插入块元素：将其隔IFC，切割后与块元素垂直并列-->
+        <div></div>
+        <span class="span4">span4</span>
+        <span class="span5">span5</span>
+    </div>
+
+    <!-- 基线 -->
+    <!-- 1.inlin元素的边缘时content-box -->
+    <!-- 2.inline-block元素的边缘时margin-box -->
+    <!-- 3.inline-block元素，如果没有内容，则基线与下边界对齐 -->
+    <!-- 4.inline-block元素，如果有内容，则基线与内容的基线对齐 -->
+    <!-- 4.inline-block元素，如果有多行内容，则基线与最后一行内容的基线对齐 -->
+    <div class="container">
+        <div class="box1">1111111111111111111111111111ggg</div>
+        <div class="box2">222ggg</div>
+        <div class="box3"></div>
+        <span class="span6">333ggg</span>
+    </div>
+
+
+    <!-- IFC Inline Formatting Contexts 内联格式化上下文 -->
+    <!-- IFC的line box（线框）高度由其包含行内元素中最高的实际高度计算而来，不受竖直方向的padding/margin影响 -->
+    <!-- IFC中的line box一般左右都贴紧整个IFC，但是会因为float元素二扰乱。当float元素位于IFC和line box之间的时候，会使得line box宽度缩短。同一个IFC下的多个line box高度会不同。 -->
+    <!-- IFC中不能由块元素的，当插入块元素（如p中插入div）会产生两个匿名块与div分隔开，即产生两个IFC，每个IFC对外表现为块元素，与div垂直排列 -->
+
+    
+</body>
+</html>
