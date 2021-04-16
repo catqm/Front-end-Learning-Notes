@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* img{
+            border: 5px solid green;
+        } */
+        /* 属性存在 */
+        img[alt]{
+            border: 5px solid green;
+        }
+        /* 属性值精确匹配 */
+        img[alt="sheep"]{
+            border: 5px solid slateblue;
+        }
+
+        div{
+            width: 100px;
+            height: 100px;
+            float: left;
+            margin-left: 30px;
+            border: 5px solid skyblue;
+            font-size: 25px;
+        }
+        /* 以hello-开头或只有hello的元素 */
+        div[class|="hello"]{
+            background-color: tan;
+        }
+        /* 包含单个hello的元素 */
+        div[class~="hello"]{
+            background-color: teal;
+        }
+        /* 开头匹配 */
+        div[class^="hello"]{
+            background-color:yellow;
+        }
+        /* 结尾匹配 */
+        div[class$="hello"]{
+            background-color: lightcoral;
+        }
+        /* 包含匹配 */
+        div[class*="hello"]{
+            background-color: cornflowerblue;
+        }
+        /* 多个属性 */
+        div[class*="hello"][data-xy="msg"]{
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+    <img src="./picture/1.jpg" alt="sheep">
+    <img src="./picture/3.jpg" alt="prince">
+    <img src="./picture/2.jpg" alt="dog">
+    <img src="./picture/4.jpg" >
+    <hr>
+    <div class="hello">hello</div>
+    <div class="hello xy">hello xy</div>
+    <div class="xy hello">xy hello</div>
+    <div class="hello-xy">hello-xy</div>
+    <div class="xy-hello">xy-hello</div>
+    <div class="xyhello">xyhello</div>
+    <div class="helloxy">helloxy</div>
+    <div class="xy_hello">xy_hello</div>
+    <div class="hello_xy">hello_xy</div>
+    <hr>
+    <div class="hello_xy" data-xy="msg">hello_xy</div>
+
+</body>
+</html>

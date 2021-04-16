@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background: url(./picture/1.jpg) no-repeat;
+        }
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: coral;
+            /* 圆角 */
+            /* 早期版本的浏览器支持CSS3需要加前缀 */
+            /* chrome,safari */
+            -webkit-border-radius: 50%;
+            /* firefox */
+            -moz-border-radius: 50%;
+            /* IE */
+            -ms-border-radius: 50%;
+            /* opera */
+            -o-border-radius: 50%;
+            border-radius: 50%;
+        }
+        /* 透明度 */
+        .box1{
+            background-color: rgba(236, 118, 89, 0.5);
+        }
+        .box2{
+            background-color: rgb(236, 118, 89);
+            /* opacity会影响子元素 */
+            opacity: 0.5;
+        }
+        .demo{
+            width: 100px;
+            height: 100px;
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1">
+        <div class="demo"></div>
+    </div>
+    <div class="box box2">
+        <div class="demo"></div>
+    </div>
+</body>
+</html>
