@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            float: left;
+            width: 200px;
+            height: 200px;
+            margin-left: 20px;
+            background-color: pink;
+        }
+        /* 四值法:左上，右上，右下，左下 */
+        .box1{
+            border-radius: 10px 40px 70px 100px;
+        }
+        /* 单值法 */
+        .box2{
+            border-radius: 50px;
+        }
+        /* 单独设置 */
+        .box3{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 40px;
+            border-bottom-left-radius: 70px;
+            border-bottom-right-radius: 100px;
+        }
+        /* 百分比 */
+        .box4{
+            border-radius: 20%;
+        }
+        .box5{
+            width: 400px;
+            border-radius: 25%;
+        }
+        .box6{
+            width: 400px;
+            border-radius: 100px;
+        }
+        hr{
+            clear: both;
+        }
+        .box7{
+            border-radius: 0 50% 0 50%;
+            height: 300px;
+        }
+        .box8{
+            border-radius: 200px 200px 0 0;
+        }
+        .box9{
+            border-radius: 200px 200px 200px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+    <div class="box box6"></div>
+    <hr>
+    <div class="box box7"></div>
+    <div class="box box8"></div>
+    <div class="box box9"></div>
+    <div class="box box10"></div>
+    <div class="box box11"></div>
+</body>
+</html>
