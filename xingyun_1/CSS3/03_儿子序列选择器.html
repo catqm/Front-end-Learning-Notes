@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 儿子序列选择器 */
+        /* 第一个 */
+        /* 要保证是同一父级中的第一个元素 */
+        /* p:first-child{
+            background-color: pink;
+        } */
+        /* h3:first-child{
+            background-color: plum;
+        } */
+        /* .item:first-child{
+            background-color: powderblue;
+        } */
+        /* 最后一个 */
+        /* .item:last-child{
+            background-color: rosybrown;
+        } */
+        /* 偶数 */
+        p:nth-child(even){
+            background-color: sandybrown;
+        }
+        h3:nth-child(2n){
+            background-color: seagreen;
+        }
+        /* 奇数 */
+        p:nth-child(odd){
+            background-color: springgreen;
+        }
+        h3:nth-child(2n+1){
+            background-color: tan;
+        }
+        /* 从后开始数 */
+        .item:nth-last-child(5n+1){
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <!-- <div></div> -->
+        <p class="item">1-1</p>
+        <p class="item">2-2</p>
+        <p class="item">3-3</p>
+        <p class="item">4-4</p>
+        <p class="item">5-5</p>
+        <p class="item">6-6</p>
+        <p class="item">7-7</p>
+        <p class="item">8-8</p>
+        <p class="item">9-9</p>
+        <p class="item">10-10</p>
+        <!-- <p class="item">10-10</p> -->
+        <h3 class="item">1-1</h3>
+        <h3 class="item">2-2</h3>
+        <h3 class="item">3-3</h3>
+        <h3 class="item">4-4</h3>
+        <h3 class="item">5-5</h3>
+    </div>
+</body>
+</html>

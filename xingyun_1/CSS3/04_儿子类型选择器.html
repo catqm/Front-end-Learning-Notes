@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 儿子类型选择器 */
+        /* 不考虑其他元素类型 */
+        p:first-of-type{
+            background-color: wheat;
+        }
+        /* 考虑其他元素类型 */
+        /* p:first-child{
+            background-color: violet;
+        } */
+        /* 同类型最后一个 */
+        p:last-of-type{
+            background-color: yellow;
+        }
+        /* 偶数个 */
+        p:nth-of-type(2n){
+            background-color: teal;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <div></div>
+        <p class="item">1-1</p>
+        <p class="item">2-2</p>
+        <p class="item">3-3</p>
+        <p class="item">4-4</p>
+        <p class="item">5-5</p>
+        <p class="item">6-6</p>
+        <p class="item">7-7</p>
+        <p class="item">8-8</p>
+        <p class="item">9-9</p>
+        <p class="item">10-10</p>
+        <h3 class="item">1-1</h3>
+        <h3 class="item">2-2</h3>
+        <h3 class="item">3-3</h3>
+        <h3 class="item">4-4</h3>
+        <h3 class="item">5-5</h3>
+    </div>
+    <div>
+        <div></div>
+        <p class="item">1-1</p>
+        <p class="item">2-2</p>
+        <p class="item">3-3</p>
+        <p class="item">4-4</p>
+        <p class="item">5-5</p>
+        <p class="item">6-6</p>
+        <p class="item">7-7</p>
+        <p class="item">8-8</p>
+        <p class="item">9-9</p>
+        <p class="item">10-10</p>
+        <h3 class="item">1-1</h3>
+        <h3 class="item">2-2</h3>
+        <h3 class="item">3-3</h3>
+        <h3 class="item">4-4</h3>
+        <h3 class="item">5-5</h3>
+    </div>
+    <div>
+        <div></div>
+        <p class="item">1-1</p>
+        <p class="item">2-2</p>
+        <p class="item">3-3</p>
+        <p class="item">4-4</p>
+        <p class="item">5-5</p>
+        <p class="item">6-6</p>
+        <p class="item">7-7</p>
+        <p class="item">8-8</p>
+        <p class="item">9-9</p>
+        <p class="item">10-10</p>
+        <h3 class="item">1-1</h3>
+        <h3 class="item">2-2</h3>
+        <h3 class="item">3-3</h3>
+        <h3 class="item">4-4</h3>
+        <h3 class="item">5-5</h3>
+    </div>
+</body>
+</html>
