@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border-radius: 40px;
+            margin: 50px;
+            /* 阴影 */
+            /* 参数：水平偏移量，垂直偏移量，模糊半径，投影尺寸，阴影颜色，投影方式（外部投影-默认/内部投影） */
+            box-shadow: 30px 30px 10px -20px gray inset;
+            /* 多个阴影，可用逗号隔开 */
+            box-shadow: 30px 30px 10px 20px gray,50px 50px 10px 30px skyblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
