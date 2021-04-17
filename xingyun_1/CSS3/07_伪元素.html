@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS3建议用双冒号，PC端兼容IE6/7/8建议单冒号 */
+        h1::before{
+            content: "hello";
+            color: red;
+        }
+        /* 后面插入 */
+        h1::after{
+            content: "前端练习呼呼呼";
+            color: salmon;
+        }
+
+        p{
+            width: 400px;
+            border: 1px solid teal;
+        }
+        /* 第一个字母 */
+        p::first-letter{
+            font-size: 50px;
+            color: tomato;
+        }
+        /* 第一行 */
+        p::first-line{
+            color: violet;
+        }
+        /* 选择文本 */
+        p::selection{
+            background-color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <h1>星云喵喵</h1>
+    <p>星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼星云喵喵前端练习呼呼呼</p>
+</body>
+</html>
