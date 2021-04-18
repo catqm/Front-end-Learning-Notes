@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            margin: 100px;
+            border: 100px dotted salmon;
+            padding: 100px;
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            background-image: url(./picture/3.jpg);
+            background-repeat: no-repeat;
+            font-size: 50px;
+            color: red;
+            /* 更改第一张背景图片的绘制位置 */
+            /* 从边框绘制 */
+            /* background-origin: border-box; */
+            /* 从内容区域绘制 */
+            background-origin: content-box;
+            /* 默认值是padding-box */
+            /* background-origin: padding-box; */
+
+            /* 背景平铺 */
+            /* background-repeat: repeat; */
+
+            /* 背景剪裁(背景色和背景图片一起) origin仅处理图片 */
+            /* background-clip: padding-box; */
+            background-clip: content-box;
+            /* 默认值是border-box */
+            background-clip: border-box;
+
+            /* 背景尺寸 */
+            /* 像素表示法 */
+            /* background-size: 100px 100px; */
+            /* 百分数表示法：背景图与整个背景的比 */
+            /* background-size: 100% 100%; */
+            /* 单值表示法 */
+            /* 原图的尺寸为400*400 */
+            /* 覆盖，尽可能大 尺寸为1000*1000 */
+            width: 1000px;
+            height: 800px;
+            /* background-size: cover; */
+            /* 容纳,显示全部 尺寸为800*800 */
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">hello</div>
+</body>
+</html>
