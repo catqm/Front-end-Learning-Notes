@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 设置多背景 */
+        .box{
+            width: 1000px;
+            height: 500px;
+            border: 5px solid steelblue;
+            /* background: url(./picture/3.jpg) no-repeat,url(./picture/2.jpg,) no-repeat,url(./picture/1.jpg) no-repeat; */
+            background: url(./picture/2.jpg),url(./picture/1.jpg),url(./picture/5.jpg);
+            background-repeat: no-repeat;
+            /* 裁剪 */
+            background-size: 100px 100px,500px 300px,cover;
+            /* 定位 */
+            background-position: 0 0,right bottom,center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

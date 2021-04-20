@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            margin: 50px;
+            border: 5px solid slateblue;
+            
+        }
+        .box1{
+            /* 线性渐变 */
+            /* 兼容浏览器添加前缀 */
+            /* background-image: -webkit-linear-gradient(); */
+            /* background-image: -webkit-linear-gradient(top,red,blue,slateblue); */
+            /* 左上角 */
+            background-image: -webkit-linear-gradient(top left,red 0%,blue 80%,slateblue 100%);
+        }
+        .box2{
+            /* 径向渐变 */
+            /* 默认圆形 */
+            background-image: -webkit-radial-gradient(red,blue,slateblue);
+
+            /* 有兼容性问题 */
+            /* 椭圆形状 */
+            /* background-image: -webkit-radial-gradient(ellipse,red,blue,slateblue); */
+            /* 渲染位置 */
+            /* background-image: -webkit-radial-gradient(circle at left top,red,blue,slateblue);
+            background-image: -webkit-radial-gradient(circle at 50px 50px,red,blue,slateblue); */
+        }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</body>
+</html>
