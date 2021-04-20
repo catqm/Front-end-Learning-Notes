@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: thistle;
+            border: 1px solid palevioletred;
+            /* 过渡 */
+            /* transition:过渡属性,完成过渡的时间,缓冲描述,延迟时间（单位为s不可省略） */
+            /* transition: all 1s ease 3s; */
+            /* 缓冲描述：ease 缓入缓出；linear 匀速；贝塞尔曲线 cubic-bezier(0,0.33,1,-0.35) */
+            /* transition: background-color 2s ease 3s; */
+
+            /* 单独设置 */
+            transition-property: background-color;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+            transition-delay: 3s;
+        }
+        /* 鼠标滑过盒子，改变宽高以及背景 */
+        .box:hover{
+            width: 600px;
+            height: 400px;
+            background-color: skyblue;
+            /* transition: all 1s ease 3s; */
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
