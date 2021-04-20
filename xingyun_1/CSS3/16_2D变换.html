@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 533px;
+            border: 5px solid burlywood;
+            margin: 50px auto;
+        }
+        img{
+            width: 400px;
+            height: 533px;
+            /* 旋转 正值顺时针 */
+            /* transform:rotate(-30deg); */
+
+            /* 缩放 相对于原来的位置变化 */
+            /* transform: scale(0.5); */
+
+            /* 平移 (x,y) */
+            /* 相对中心点移动，定位是相对左上角移动 */
+            /* transform: translate(100px,50px); */
+
+            /* 设置多个变换，中间空格隔开 */
+            transform: translate(20px,20px) rotate(-15deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./picture/4.jpg" alt="">
+    </div>
+</body>
+</html>
