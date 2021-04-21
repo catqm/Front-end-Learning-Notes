@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 501px;
+            border: 2px solid sienna;
+            margin: 0 auto;
+            /* 沿着X轴旋转 */
+            transform: rotateY(30deg);
+            /* 让3D生效 */
+            transform-style: preserve-3d;
+            /* 设置景深 */
+            perspective: 1000px;
+            position: relative;
+        }
+        img{
+            position: absolute;
+        }
+        /* 垂直屏幕方向，向用户移动300px */
+        .img1{
+            transform: translateZ(300px);
+            /* transform: translateX(100px); */
+            /* transform: translateY(100px); */
+        }
+        .img2{
+            transform: translateZ(-300px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+       <img class="img1" src="./picture/1.jpg" alt=""> 
+       <img class="img2" src="./picture/1.jpg" alt="">
+    </div>
+    
+</body>
+</html>
