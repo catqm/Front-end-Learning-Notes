@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 501px;
+            border: 2px solid springgreen;
+            margin: 0 auto;
+            /* 3D旋转 */
+            transform-style: preserve-3d;
+            perspective: 1000px;
+            /* transform: rotateX(30deg) rotateY(30deg); */
+        }
+        /* 内部的图片旋转 */
+        .img1{
+            /* 旋转180°，看到背面 */
+            /* transform: rotatey(180deg); */
+            /* 背面不可见 */
+            /* backface-visibility: hidden; */
+
+            /* 更改旋转轴 */
+            transform-origin: left top;
+        }
+        .img1:hover{
+            transform: rotatey(-180deg);
+            transition: all 2s ease 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img1" src="./picture/1.jpg" alt="">
+    </div>
+    <img src="./picture/1.jpg" alt="">
+</body>
+</html>
