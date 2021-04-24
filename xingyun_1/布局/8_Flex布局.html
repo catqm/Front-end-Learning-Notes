@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            height: 700px;
+            background-color: pink;
+            border: 5px solid #000;
+            margin: 50px auto;
+            /* 默认水平方向排列，左边为起点 */
+            display: flex;
+            /* 更改主轴以及起点与终点 */
+            /* 垂直方向排列，上面为起点 */
+            /* flex-direction: column; */
+            /* 垂直方向排列，下面为起点 */
+            /* flex-direction: column-reverse; */
+            /* 水平方向排列，右边为起点 */
+            flex-direction: row-reverse;
+
+            /* 换行，默认nowrap不换行 */
+            /* flex-wrap: wrap; */
+            /* 第一行在下方 */
+            flex-wrap: wrap-reverse;
+
+            /* 复合属性 */
+            flex-flow: row wrap;
+
+            /* 主轴对齐方式 */
+            /* 默认起点对齐 */
+            /* justify-content: flex-start; */
+            /* 终点对齐 */
+            /* justify-content: flex-end; */
+            /* 居中对齐 */
+            /* justify-content: center; */
+            /* 盒子与边框的距离为盒子间距离的一半，盒子均匀分布 */
+            /* justify-content: space-around; */
+            /* 盒子贴边，盒子均匀分布 */
+            /* justify-content: space-between; */
+            /* 盒子与边框的距离为盒子间距离的相同，盒子均匀分布 */
+            justify-content: space-evenly;
+
+            /* 交叉轴对齐 */
+            /* 默认值，如果盒子未设置具体高度，将占满整个容器的高度 */
+            /* align-items: stretch; */
+            /* 与第一行的文字基线对齐 */
+            /* align-items: baseline; */
+            align-items: center;
+            
+        }
+        .box{
+            width: 130px;
+            height: 130px;
+            background-color: powderblue;
+            font-size: 40px;
+            color: #fff;
+            border: 2px solid slateblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="box box5">5</div>
+        <div class="box box6">6</div>
+        <div class="box box7">7</div>
+        <div class="box box8">8</div>
+        <div class="box box9">9</div>
+        <div class="box box10">10</div>
+        <div class="box box11">11</div>
+        <div class="box box12">12</div>
+        <div class="box box13">13</div>
+        <div class="box box14">14</div>
+        <div class="box box15">15</div>
+        <div class="box box16">16</div>
+        <div class="box box17">17</div>
+        <div class="box box18">18</div>
+        <div class="box box19">19</div>
+        <div class="box box20">20</div>
+    </div>
+</body>
+</html>
