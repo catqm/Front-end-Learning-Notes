@@ -1,0 +1,59 @@
+/* 清空默认样式 */
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a{
+    color: #000;
+    text-decoration: none;
+}
+/* 原子类 */
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* 状态栏 */
+.status{
+    height: 28px;
+    line-height: 28px;
+    font-size: 16px;
+    color: #fff;
+    background-image: -webkit-linear-gradient(top,#037ecc,#1bbae2);
+}
+.status .container{
+    display: flex;
+    justify-content: flex-end;
+}
+.status span{
+    white-space: pre;
+}
+.status .user{
+    width: 10px;
+    position: relative;
+    margin-left: 50px;
+}
+.status .user::before{
+    content: "";
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 5px;
+    width: 6px;
+    height: 6px;
+}
+.status .user::after{
+    content: "";
+    border: 1px solid #fff;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    position: absolute;
+    top: 14px;
+    left: -5px;
+    width: 16px;
+    height: 8px;
+}
+.status .text{
+    margin-right: 15px;
+}
