@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 1000px;
+            /* width: 800px; */
+            height: 400px;
+            background-color: pink;
+            border: 1px solid #000;
+            margin: 100px auto;
+            /* flex */
+            display: flex;
+            align-items: flex-end;
+        }
+        .box{
+            font-size: 40px;
+            color: #fff;
+            text-align: center;
+            height: 100px;
+        }
+        .box1{
+            width: 300px;
+            background-color: skyblue;
+            /* order调节顺序,默认为0 */
+            order: 3;
+            /* 缩小,默认为1 */
+            /* 不缩小 */
+            flex-shrink: 0;
+            /* 占据空间 */
+            flex-basis: 400px;
+            /* 复合属性:grow,shrink,basis */
+            flex: 0 0 400px;
+        }
+        .box2{
+            width: 200px;
+            background-color: blueviolet;
+            order: 1;
+            /* 放大，默认为0 */
+            /* 占满剩余空间 */
+            /* flex-grow: 3; */
+            flex: 1 1 auto;
+            /* 单独改变对齐方式，可覆盖align-items */
+            align-self: center;
+        }
+        .box3{
+            width: 400px;
+            background-color: cadetblue;
+            /* 多个放大按比例均分剩余空间 */
+            /* flex-grow: 1; */
+            flex: auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- 项目可理解为盒子 -->
+    <div class="container">
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</body>
+</html>
