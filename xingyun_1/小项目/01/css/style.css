@@ -13,7 +13,9 @@ a{
     width: 1200px;
     margin: 0 auto;
 }
-
+body{
+    min-width: 1500px;
+}
 /* 状态栏 */
 .status{
     height: 28px;
@@ -56,4 +58,46 @@ a{
 }
 .status .text{
     margin-right: 15px;
+}
+/* 导航 */
+.nav{
+    height: 50px;
+    line-height: 50px;
+    box-shadow: 0 2px 3px rgba(0, 0,0, 0.2);
+}
+.nav .container{
+    display: flex;
+    align-items: center;
+}
+.nav img{
+    width: 106px;
+    height: 22px;
+    margin-right: 60px;
+}
+.nav ul{
+    display: flex;
+    /* 沾满剩余空间，将input挤到右边去 */
+    flex: 1;
+}
+.nav li{
+    margin-right: 55px;
+}
+.nav input{
+    padding: 6px 16px;
+    /* 输入框的外边框 */
+    outline: none;
+    border-radius: 15px ;
+    border: 1px solid #999;
+}
+.nav .search .search-hover{
+    position: relative;
+    font-size: 12px;
+    top: -30px;
+    left: 60px;
+    line-height: 1;
+}
+.nav .search .search-hover span{
+    background-color: #ccc;
+    margin-left: 6px;
+    padding: 2px 4px;
 }
