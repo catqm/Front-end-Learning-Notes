@@ -8,11 +8,13 @@ a{
     color: #000;
     text-decoration: none;
 }
+
 /* 原子类 */
 .container{
     width: 1200px;
     margin: 0 auto;
 }
+/* 按钮 */
 .btn{
     padding: 6px 20px;
     border-radius: 6px;
@@ -37,10 +39,43 @@ a{
     right: 14px;
     border-left-color: #e5004f;
 }
+/* 渐变线 */
+.line{
+    margin: 0 auto;
+    width: 1200px;
+    height: 10px;
+    overflow: hidden;
+}
+.line::after{
+    content: "";
+    border: 10px solid transparent;
+    border-right-width: 1200px;
+    border-left-width: 0;
+    border-right-color: #078bb1;
+    position: relative;
+    top:-19px
+}
+.line2{
+    margin: 0 auto;
+    width: 1200px;
+    height: 10px;
+    overflow: hidden;
+}
+.line2::before{
+    content: "";
+    border: 10px solid transparent;
+    border-left-width: 1200px;
+    border-right-width: 0;
+    border-left-color: #078bb1;
+    position: relative;
+    top: 8px;
+}
+
 /* 页面最小宽度 */
 body{
     min-width: 1500px;
 }
+
 /* 状态栏 */
 .status{
     height: 28px;
@@ -84,6 +119,7 @@ body{
 .status .text{
     margin-right: 15px;
 }
+
 /* 导航 */
 .nav{
     height: 50px;
@@ -129,6 +165,7 @@ body{
     margin-left: 6px;
     padding: 2px 4px;
 }
+
 /* banner */
 .banner .container{
     position: relative;
@@ -149,6 +186,7 @@ body{
     left: 20px;
     background-image: url(../picture/arrow_left.png);
 }
+
 /* 手机型号模块 */
 .phone .container{
     text-align: center;
