@@ -89,10 +89,13 @@ body{
     border-radius: 15px ;
     border: 1px solid #999;
 }
-.nav .search .search-hover{
+.nav .search{
     position: relative;
+}
+.nav .search .search-hover{
+    position: absolute;
     font-size: 12px;
-    top: -30px;
+    top: 20px;
     left: 60px;
     line-height: 1;
 }
@@ -100,4 +103,24 @@ body{
     background-color: #ccc;
     margin-left: 6px;
     padding: 2px 4px;
+}
+/* banner */
+.banner .container{
+    position: relative;
+    height: 550px;
+    background: url(../picture/banner3.png) no-repeat center 5px;
+}
+.banner .arrow{
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    background: rgba(0, 0,0, 0.3) url(../picture/arrows_right.png) no-repeat center center;
+    top: 50%;
+    margin-top: -24px;
+    right: 20px;
+    border-radius: 50%;
+}
+.banner .arrow1{
+    left: 20px;
+    background-image: url(../picture/arrow_left.png);
 }
