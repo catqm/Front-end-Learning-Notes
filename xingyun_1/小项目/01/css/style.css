@@ -13,6 +13,31 @@ a{
     width: 1200px;
     margin: 0 auto;
 }
+.btn{
+    padding: 6px 20px;
+    border-radius: 6px;
+    color: #fff;
+    background: #e5004f;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    padding-right: 30px;
+}
+.btn::before,
+.btn::after{
+    content: "";
+    position: absolute;
+    right: 12px;
+    top: 11px;
+    border: 5px solid transparent;
+    border-left-color: #fff;
+}
+.btn::after{
+    right: 14px;
+    border-left-color: #e5004f;
+}
+/* 页面最小宽度 */
 body{
     min-width: 1500px;
 }
@@ -123,4 +148,68 @@ body{
 .banner .arrow1{
     left: 20px;
     background-image: url(../picture/arrow_left.png);
+}
+/* 手机型号模块 */
+.phone .container{
+    text-align: center;
+}
+.phone h2{
+    text-align: center;
+    font-weight: normal;
+    font-size: 36px;
+    padding: 40px 0 30px;
+}
+.phone .select-list{
+    display: flex;
+    justify-content: center;
+}
+.phone select{
+    width: 140px;
+    margin: 10px;
+    height: 30px;
+}
+.phone .range img{
+    vertical-align: middle;
+    width: 550px;
+}
+.phone .range .btn{
+    background-color: #078bb1;
+}
+.phone .range .btn::after{
+    border-left-color: #078bb1;
+}
+.phone .content{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.phone .content img{
+    margin-right: 80px;
+}
+.phone .content .info{
+    flex-basis: 450px;
+    text-align: left;
+}
+.phone .content .info h3{
+    font-size: 30px;
+    padding: 70px 0 30px;
+}
+.phone .content .info h3 span{
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-left: 10px;
+    padding: 1px 2px;
+    position: relative;
+    top: -10px;
+}
+.phone .content .intro{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.phone .content .info p{
+    line-height: 40px;
+}
+.phone .content .info .btn{
+    margin-top: 40px;
 }
