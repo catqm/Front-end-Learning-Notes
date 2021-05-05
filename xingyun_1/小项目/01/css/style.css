@@ -246,3 +246,59 @@ body{
 .phone .content .info .btn{
     margin-top: 40px;
 }
+
+/* 相关推荐 */
+.phone-list .title{
+    margin: 25px 0 15px;
+    height: 30px;
+    padding-left: 10px;
+    border-left: 3px #078bb1 solid ;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 30px;
+}
+.phone-list .title::after{
+    content: "更多 >";
+    float: right;
+    font-size: 14px;
+}
+.phone-list .list{
+    display: flex;
+    justify-content: space-between;
+}
+.phone-list .list .item{
+    width: 280px;
+    text-align: center;
+    background-color: #fff;
+    padding: 30px 0 30px;
+    position: relative;
+}
+.phone-list .list .item h3{
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.phone-list .list .item p{
+    font-size: 14px;
+    color: #999;
+}
+.phone-list .list .item img{
+    width: 180px;
+    height: 180px;
+    margin: 25px 0 30px;
+}
+.phone-list .list .item .icon{
+    position: absolute;
+    top: 80px;
+    right: 20px;
+    width: 38px;
+    height: 38px;
+    text-align: center;
+    line-height: 38px;
+    background-color: #f08b39;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 14px;
+}
+.phone-list .list .item .icon-2{
+    background-color: #1960d3;
+}
